@@ -18,14 +18,16 @@ namespace PasswordManager.EF.Configuration {
             //primary key
             builder.HasKey(userEntry=>userEntry.ID);
 
-            builder.Property(userEntry=>userEntry.MasterUserName).HasMaxLength(20).IsRequired();
-            builder.Property(userEntry=>userEntry.MasterPassword).HasMaxLength(20).IsRequired();
+            builder.Property(userEntry=>userEntry.MasterUserName).HasMaxLength(100).IsRequired();
+            builder.Property(userEntry=>userEntry.MasterPassword).HasMaxLength(128).IsRequired();
             builder.Property(userEntry=>userEntry.FirstName).HasMaxLength(20).IsRequired();
             builder.Property(userEntry=>userEntry.LastName).HasMaxLength(20).IsRequired();
             builder.Property(userEntry=>userEntry.Phone).HasMaxLength(20).IsRequired();
             builder.Property(userEntry=>userEntry.DateCreated).IsRequired();
+            builder.Property(userEntry=>userEntry.Active).IsRequired();
+           
 
-            //searching for config bool Active..
+            
         }
     }
 }       

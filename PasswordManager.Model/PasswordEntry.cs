@@ -17,6 +17,7 @@ namespace PasswordManager.Model {
         //relations
 
         public UserEntry UserEntry { get; set; }
+        public Guid UserID { get; set; }
 
         //ctor
 

@@ -17,16 +17,17 @@ namespace PasswordManager.EF.Configuration {
             //primary key
             builder.HasKey(passwordEntry => passwordEntry.ID);
 
-            builder.Property(passwordEntry=>passwordEntry.Password).HasMaxLength(20).IsRequired();
-            builder.Property(passwordEntry=>passwordEntry.UserName).HasMaxLength(20).IsRequired();
+            builder.Property(passwordEntry=>passwordEntry.Password).HasMaxLength(128).IsRequired();
+            builder.Property(passwordEntry=>passwordEntry.UserName).HasMaxLength(100).IsRequired();
             builder.Property(passwordEntry=>passwordEntry.DateModified).IsRequired();
             builder.Property(passwordEntry=>passwordEntry.Site).HasMaxLength(20).IsRequired();
+            builder.Property(passwordEntry=>passwordEntry.Active).IsRequired();
 
             //relation userEntry - passwordEntry
 
             builder.HasOne(passwordEntry=>passwordEntry.UserEntry)
             .WithMany(userEntry=>userEntry.StoredPasswords)
-            .HasForeignKey(passwordEntry=>passwordEntry.ID).OnDelete(DeleteBehavior.Restrict);
+            .HasForeignKey(passwordEntry=>passwordEntry.UserID).OnDelete(DeleteBehavior.Restrict);
         }
     }
 }
