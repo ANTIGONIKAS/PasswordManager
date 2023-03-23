@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace PasswordManager.Model {
+
     public class UserEntry:Entry {
 
         public string MasterUserName { get; set; }

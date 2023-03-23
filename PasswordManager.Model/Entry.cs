@@ -8,11 +8,11 @@ namespace PasswordManager.Model
 {
     public class Entry
     {
-        public Guid Id { get; set; }
+        public Guid ID { get; set; }
 
         public Entry()
         {
-            Id= Guid.NewGuid();
+            ID= Guid.NewGuid();
         }
     }
 }
