@@ -31,5 +31,21 @@ namespace PasswordManager.Blazor.Server.Controllers {
             });
 
         }
+        //TODO: When UserEntry is fixed return to correct line 44
+        [HttpPost]
+        public async Task<ActionResult> Post(PasswordViewModel password)
+        {
+            PasswordEntry newPasswordEntry = new();
+            newPasswordEntry.Site = password.Site;
+            newPasswordEntry.UserName = password.UserName;  
+            newPasswordEntry.Password = password.Password;
+            newPasswordEntry.DateModified = DateTime.Now;
+            newPasswordEntry.Active = true;
+            newPasswordEntry.UserID =new Guid("A2C154CD-BEE6-42D4-A0A1-36AE84D23F44");
+            _passwordRepo.Add(newPasswordEntry);
+            return Ok();
+
+
+        }
     }
 }
