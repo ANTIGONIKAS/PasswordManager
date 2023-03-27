@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.ResponseCompression;
+using PasswordManager.EF.Repositories;
+using PasswordManager.Model;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+builder.Services.AddScoped<IEntityRepo<PasswordEntry>, PasswordEntryRepo>();
+
 
 var app = builder.Build();
 

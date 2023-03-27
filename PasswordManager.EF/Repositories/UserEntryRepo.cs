@@ -28,18 +28,16 @@ namespace PasswordManager.EF.Repositories {
         public UserEntry? GetById(Guid ID)
         {
             using var context = new ApplicationContext();
-            return context.UserEntries.Where(userEntry=>userEntry.ID==ID)
+            var result = context.UserEntries.Where(userEntry=>userEntry.ID==ID)
             .Include(userEntry=>userEntry.StoredPasswords)
             .SingleOrDefault();
+            return result;
         }
 
         public void Update(Guid ID, UserEntry entity)
         {
             using var context = new ApplicationContext();
-            var UserEntryDb = context.UserEntries
-               .Where(userEntry => userEntry.ID == ID)
-               .Include(userEntry => userEntry.StoredPasswords)
-               .SingleOrDefault();
+            var UserEntryDb = GetById(ID);
             if (UserEntryDb is null) throw new KeyNotFoundException($"Given id '{ID}' was not found");
             UserEntryDb.MasterUserName = entity.MasterUserName;
             UserEntryDb.MasterPassword = entity.MasterPassword;
@@ -63,7 +61,6 @@ namespace PasswordManager.EF.Repositories {
                 throw new KeyNotFoundException($"Given id '{ID}' was not found");
             context.Remove(UserEntryDb);
             context.SaveChanges();
-
         }
     }
 }
