@@ -1,4 +1,4 @@
-﻿@page "/fetchdata"
+﻿@page "/fetchdata_dolmades"
 @using PasswordManager.Blazor.Shared
 @inject HttpClient Http
 
@@ -43,5 +43,8 @@ else
     protected override async Task OnInitializedAsync()
     {
         forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("WeatherForecast");
+
+
+
     }
 }
