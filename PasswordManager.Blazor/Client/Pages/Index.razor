@@ -1,8 +1,10 @@
 ﻿@page "/"
+@using PasswordManager.Blazor.Shared.Services;
 @using PasswordManager.Blazor.Shared.ViewModels.Password;
 @inject HttpClient httpClient
 @inject NavigationManager navigationManager
 @inject IJSRuntime jsRuntime
+@inject Authenticator auth
 
 <PageTitle>Index</PageTitle>
 
@@ -43,8 +45,23 @@ else
 @code{
     private bool isLoading = false;
     private UserEntryViewModel user = new();
+    private List<UserEntryViewModel> lista = new();
+    private UserEntryViewModel found;
 
-    private async Task OnLogin(){}
+    private async Task OnLogin() {
+        lista = await httpClient.GetFromJsonAsync<List<UserEntryViewModel>>("userEntry");
+        found = auth.Authenticate(lista, user);
+        if(found == null) {
+            await jsRuntime.InvokeVoidAsync("alert", "Wrong info");
+
+        }
+        else {
+            await jsRuntime.InvokeVoidAsync("alert", $"Welcome user {found.ID}");
+            navigationManager.NavigateTo("/passwordlist");
+        }
+
+         
+    }
 
     private async Task OnRegister()
     {
