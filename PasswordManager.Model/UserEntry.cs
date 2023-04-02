@@ -16,6 +16,8 @@ namespace PasswordManager.Model {
         public DateTime DateCreated { get; set; }
         public bool Active { get; set; }
 
+       
+
         public List<PasswordEntry> StoredPasswords { get; set; } = new();
 
         public UserEntry() : base() 

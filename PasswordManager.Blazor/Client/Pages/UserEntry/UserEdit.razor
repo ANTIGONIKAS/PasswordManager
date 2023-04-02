@@ -1,6 +1,88 @@
-﻿@page "/i/antigoni/einai/3erokefali/edit"
+﻿@page "/createNewAccount"
+@using PasswordManager.Blazor.Shared.ViewModels.Password;
+@inject HttpClient httpClient
+@inject NavigationManager navigationManager
+@inject IJSRuntime jsRuntime
+
+
+
+
 <h3>Create new account</h3>
 
-@code {
+@if (isLoading)
+{
+    <div class="lds-roller"></div>
+}
+else
+{
+    <EditForm Model="@user" OnValidSubmit="@OnSave">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+        <div class="row">
+            <div class="col-md-6">
+                <label class="form-label">First Name</label>
+                <InputText class="form-control" id="firstname" @bind-Value="user.FirstName" />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Last Name</label>
+                <InputText class="form-control" id="lastname" @bind-Value="user.LastName" />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Phone</label>
+                <InputText class="form-control" id="phone" @bind-Value="user.Phone" />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Email</label>
+                <InputText class="form-control" id="masterusername" @bind-Value="user.MasterUserName" />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Password</label>
+                <InputText class="form-control" id="masteruserpassword" type="password" @bind-Value="user.MasterPassword" />
+            </div>
 
+            <div class="row mt-4">
+                <div class="col">
+                    <button class="btn btn-success" type="submit">Save</button>
+                    <button class="btn btn-danger" @onclick="OnCancel">Cancel</button>
+
+
+
+                </div>
+            </div>
+        </div>
+    </EditForm>
+}
+
+
+@code {
+    private bool isLoading = true;
+
+    private UserEntryViewModel user = new();
+
+    private async Task OnSave()
+    {
+        HttpResponseMessage response;
+        response = await httpClient.PostAsJsonAsync("userEntry", user);
+        if (response.IsSuccessStatusCode)
+        {
+            await jsRuntime.InvokeVoidAsync("alert", "Created new User");
+            navigationManager.NavigateTo("passwordlist");
+        }
+        else
+        {
+            await jsRuntime.InvokeVoidAsync("alert", "Error at creating");
+        }
+
+    }
+    private async Task OnCancel()
+    {
+        
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadItemsFromServer();
+        isLoading = false;
+    }
+    private async Task LoadItemsFromServer(){}
 }
