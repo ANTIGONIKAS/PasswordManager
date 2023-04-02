@@ -1,8 +1,8 @@
 namespace PasswordManager.Win
 {
-    public partial class Form1 : Form
+    public partial class LoginF : Form
     {
-        public Form1()
+        public LoginF()
         {
             InitializeComponent();
         }
