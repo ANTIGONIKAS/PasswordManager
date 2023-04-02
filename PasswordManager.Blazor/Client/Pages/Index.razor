@@ -46,7 +46,7 @@ else
     private bool isLoading = false;
     private UserEntryViewModel user = new();
     private List<UserEntryViewModel> lista = new();
-    private UserEntryViewModel found = new();
+    private UserEntryViewModel found;
 
     private async Task OnLogin() {
         lista = await httpClient.GetFromJsonAsync<List<UserEntryViewModel>>("userEntry");
