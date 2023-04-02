@@ -31,11 +31,11 @@ namespace PasswordManager.Blazor.Server.Controllers {
                 Phone = x.Phone,
                 DateCreated = x.DateCreated,
                 Active = x.Active,
-                passwords=x.StoredPasswords
+                passwords = x.StoredPasswords
 
 
             });
-                
+
         }
         [HttpPost]
 
@@ -77,7 +77,7 @@ namespace PasswordManager.Blazor.Server.Controllers {
             {
                 return StatusCode(StatusCodes.Status404NotFound);
             }
-                
+
         }
         [HttpGet("{id}")]
 
@@ -89,16 +89,16 @@ namespace PasswordManager.Blazor.Server.Controllers {
             tmp.ID = result.ID;
             tmp.MasterUserName = result.MasterUserName;
             tmp.MasterPassword = result.MasterPassword;
-            tmp.FirstName= result.FirstName;
-            tmp.LastName= result.LastName;
+            tmp.FirstName = result.FirstName;
+            tmp.LastName = result.LastName;
             tmp.Phone = result.Phone;
             tmp.DateCreated = result.DateCreated;
             tmp.Active = result.Active;
             tmp.passwords = result.StoredPasswords;
             return tmp;
-           
+
         }
-        [HttpDelete("{id")]
+        [HttpDelete("{id}")]
 
         public async Task<ActionResult> Delete(Guid id)
         {

@@ -9,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 builder.Services.AddScoped<IEntityRepo<PasswordEntry>, PasswordEntryRepo>();
+builder.Services.AddScoped<IEntityRepo<UserEntry>, UserEntryRepo>();
 
 
 var app = builder.Build();
