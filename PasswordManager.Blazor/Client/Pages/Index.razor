@@ -1,7 +1,54 @@
 ﻿@page "/"
+@using PasswordManager.Blazor.Shared.ViewModels.Password;
+@inject HttpClient httpClient
+@inject NavigationManager navigationManager
+@inject IJSRuntime jsRuntime
 
 <PageTitle>Index</PageTitle>
 
+<h3>Sign in</h3>
+
+@if (isLoading)
+{
+    <div class="lds-roller"></div>
+}
+else
+{
+    <EditForm Model="@user" OnValidSubmit="@OnLogin">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+        <div class="row">
+            <div class="col-md-6">
+                <label class="form-label">Email</label>
+                <InputText class="form-control" id="masterusername" @bind-Value="user.MasterUserName" />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Password</label>
+                <InputText class="form-control" id="masteruserpassword" type="password" @bind-Value="user.MasterPassword" />
+            </div>
+
+            <div class="row mt-4">
+                <div class="col">
+                    <button class="btn btn-success" type="submit">Login</button>
+                    <button class="btn btn-danger" @onclick="OnRegister">Register</button>
 
 
 
+                </div>
+            </div>
+        </div>
+    </EditForm>
+
+}
+@code{
+    private bool isLoading = false;
+    private UserEntryViewModel user = new();
+
+    private async Task OnLogin(){}
+
+    private async Task OnRegister()
+    {
+        navigationManager.NavigateTo("createNewAccount");
+    }
+
+}
