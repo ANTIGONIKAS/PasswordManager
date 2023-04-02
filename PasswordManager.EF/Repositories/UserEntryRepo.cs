@@ -21,7 +21,9 @@ namespace PasswordManager.EF.Repositories {
         public IList<UserEntry> GetAll()
         {
             using var context = new ApplicationContext();
-            return context.UserEntries.Include(userEntry=>userEntry.StoredPasswords).ToList();
+            return context.UserEntries
+                .Include(userEntry=>userEntry.StoredPasswords)
+                .ToList();
 
         }
 

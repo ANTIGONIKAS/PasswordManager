@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PasswordManager.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace PasswordManager.Blazor.Shared.ViewModels.Password {
         public DateTime DateCreated { get; set; }
         public bool Active { get; set; }
 
-        public List<PasswordViewModel> passwordList = new();
+        public List<PasswordEntry> passwords { get; set; } = new();
 
         public UserEntryViewModel()
         {
