@@ -87,7 +87,33 @@ namespace PasswordManager.Blazor.Server.Controllers {
 
             UserEntryViewModel tmp = new();
             tmp.ID = result.ID;
+            tmp.MasterUserName = result.MasterUserName;
+            tmp.MasterPassword = result.MasterPassword;
+            tmp.FirstName= result.FirstName;
+            tmp.LastName= result.LastName;
+            tmp.Phone = result.Phone;
+            tmp.DateCreated = result.DateCreated;
+            tmp.Active = result.Active;
+            tmp.passwords = result.StoredPasswords;
+            return tmp;
            
+        }
+        [HttpDelete("{id")]
+
+        public async Task<ActionResult> Delete(Guid id)
+        {
+            var foundUser =_userRepo.GetById(id);
+
+            if (foundUser != null)
+            {
+                _userRepo.Delete(id);
+                return Ok();
+
+            }
+            else
+            {
+                return StatusCode(StatusCodes.Status404NotFound);
+            }
         }
     }
 }
