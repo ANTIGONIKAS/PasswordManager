@@ -23,170 +23,189 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.btnRegister = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblSurname = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblUsername = new System.Windows.Forms.Label();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.lblPnone = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            txtName = new TextBox();
+            txtSurname = new TextBox();
+            txtEmail = new TextBox();
+            txtUsername = new TextBox();
+            txtPassword = new TextBox();
+            txtPhone = new TextBox();
+            btnRegister = new Button();
+            btnCancel = new Button();
+            lblName = new Label();
+            lblSurname = new Label();
+            lblEmail = new Label();
+            lblUsername = new Label();
+            lblPassword = new Label();
+            lblPnone = new Label();
+            label1 = new Label();
+            SuspendLayout();
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Location = new System.Drawing.Point(252, 79);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(186, 23);
-            this.textBox1.TabIndex = 0;
+            txtName.Location = new Point(252, 77);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(186, 23);
+            txtName.TabIndex = 0;
             // 
-            // textBox2
+            // txtSurname
             // 
-            this.textBox2.Location = new System.Drawing.Point(252, 108);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(186, 23);
-            this.textBox2.TabIndex = 1;
+            txtSurname.Location = new Point(252, 110);
+            txtSurname.Name = "txtSurname";
+            txtSurname.Size = new Size(186, 23);
+            txtSurname.TabIndex = 1;
             // 
-            // textBox3
+            // txtEmail
             // 
-            this.textBox3.Location = new System.Drawing.Point(252, 137);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(186, 23);
-            this.textBox3.TabIndex = 2;
+            txtEmail.Location = new Point(252, 140);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(186, 23);
+            txtEmail.TabIndex = 2;
             // 
-            // textBox4
+            // txtUsername
             // 
-            this.textBox4.Location = new System.Drawing.Point(252, 166);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(186, 23);
-            this.textBox4.TabIndex = 3;
+            txtUsername.Location = new Point(252, 168);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(186, 23);
+            txtUsername.TabIndex = 3;
             // 
-            // textBox5
+            // txtPassword
             // 
-            this.textBox5.Location = new System.Drawing.Point(252, 195);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(186, 23);
-            this.textBox5.TabIndex = 4;
+            txtPassword.Location = new Point(252, 202);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(186, 23);
+            txtPassword.TabIndex = 4;
             // 
-            // textBox6
+            // txtPhone
             // 
-            this.textBox6.Location = new System.Drawing.Point(252, 224);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(186, 23);
-            this.textBox6.TabIndex = 5;
+            txtPhone.Location = new Point(252, 232);
+            txtPhone.Name = "txtPhone";
+            txtPhone.Size = new Size(186, 23);
+            txtPhone.TabIndex = 5;
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(146, 350);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(75, 23);
-            this.btnRegister.TabIndex = 6;
-            this.btnRegister.Text = "Register";
-            this.btnRegister.UseVisualStyleBackColor = true;
+            btnRegister.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btnRegister.Location = new Point(146, 265);
+            btnRegister.Name = "btnRegister";
+            btnRegister.Size = new Size(142, 41);
+            btnRegister.TabIndex = 6;
+            btnRegister.Text = "Register";
+            btnRegister.UseVisualStyleBackColor = true;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(400, 348);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 7;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCancel.Location = new Point(343, 265);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(142, 41);
+            btnCancel.TabIndex = 7;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = true;
             // 
             // lblName
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(182, 87);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(39, 15);
-            this.lblName.TabIndex = 8;
-            this.lblName.Text = "Name";
+            lblName.AutoSize = true;
+            lblName.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lblName.Location = new Point(152, 70);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(69, 30);
+            lblName.TabIndex = 8;
+            lblName.Text = "Name";
             // 
             // lblSurname
             // 
-            this.lblSurname.AutoSize = true;
-            this.lblSurname.Location = new System.Drawing.Point(182, 111);
-            this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(54, 15);
-            this.lblSurname.TabIndex = 9;
-            this.lblSurname.Text = "Surname";
+            lblSurname.AutoSize = true;
+            lblSurname.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSurname.Location = new Point(152, 101);
+            lblSurname.Name = "lblSurname";
+            lblSurname.Size = new Size(95, 30);
+            lblSurname.TabIndex = 9;
+            lblSurname.Text = "Surname";
             // 
             // lblEmail
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(185, 145);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(36, 15);
-            this.lblEmail.TabIndex = 10;
-            this.lblEmail.Text = "Email";
+            lblEmail.AutoSize = true;
+            lblEmail.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lblEmail.Location = new Point(158, 131);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(63, 30);
+            lblEmail.TabIndex = 10;
+            lblEmail.Text = "Email";
             // 
             // lblUsername
             // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(182, 169);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(60, 15);
-            this.lblUsername.TabIndex = 11;
-            this.lblUsername.Text = "Username";
+            lblUsername.AutoSize = true;
+            lblUsername.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lblUsername.Location = new Point(146, 161);
+            lblUsername.Name = "lblUsername";
+            lblUsername.Size = new Size(106, 30);
+            lblUsername.TabIndex = 11;
+            lblUsername.Text = "Username";
             // 
             // lblPassword
             // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(182, 195);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(57, 15);
-            this.lblPassword.TabIndex = 12;
-            this.lblPassword.Text = "Password";
+            lblPassword.AutoSize = true;
+            lblPassword.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPassword.Location = new Point(149, 195);
+            lblPassword.Name = "lblPassword";
+            lblPassword.Size = new Size(99, 30);
+            lblPassword.TabIndex = 12;
+            lblPassword.Text = "Password";
             // 
             // lblPnone
             // 
-            this.lblPnone.AutoSize = true;
-            this.lblPnone.Location = new System.Drawing.Point(185, 224);
-            this.lblPnone.Name = "lblPnone";
-            this.lblPnone.Size = new System.Drawing.Size(41, 15);
-            this.lblPnone.TabIndex = 13;
-            this.lblPnone.Text = "Phone";
+            lblPnone.AutoSize = true;
+            lblPnone.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPnone.Location = new Point(158, 225);
+            lblPnone.Name = "lblPnone";
+            lblPnone.Size = new Size(72, 30);
+            lblPnone.TabIndex = 13;
+            lblPnone.Text = "Phone";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(242, 23);
+            label1.Name = "label1";
+            label1.Size = new Size(196, 25);
+            label1.TabIndex = 14;
+            label1.Text = "Register New Account";
             // 
             // RegisterF
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblPnone);
-            this.Controls.Add(this.lblPassword);
-            this.Controls.Add(this.lblUsername);
-            this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.lblSurname);
-            this.Controls.Add(this.lblName);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnRegister);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Name = "RegisterF";
-            this.Text = "RegisterF";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(653, 368);
+            Controls.Add(label1);
+            Controls.Add(lblPnone);
+            Controls.Add(lblPassword);
+            Controls.Add(lblUsername);
+            Controls.Add(lblEmail);
+            Controls.Add(lblSurname);
+            Controls.Add(lblName);
+            Controls.Add(btnCancel);
+            Controls.Add(btnRegister);
+            Controls.Add(txtPhone);
+            Controls.Add(txtPassword);
+            Controls.Add(txtUsername);
+            Controls.Add(txtEmail);
+            Controls.Add(txtSurname);
+            Controls.Add(txtName);
+            Name = "RegisterF";
+            Text = "RegisterF";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
+        private TextBox txtName;
+        private TextBox txtSurname;
+        private TextBox txtEmail;
+        private TextBox txtUsername;
+        private TextBox txtPassword;
+        private TextBox txtPhone;
         private Button btnRegister;
         private Button btnCancel;
         private Label lblName;
@@ -195,5 +214,6 @@
         private Label lblUsername;
         private Label lblPassword;
         private Label lblPnone;
+        private Label label1;
     }
 }

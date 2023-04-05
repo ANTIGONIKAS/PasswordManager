@@ -23,85 +23,101 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.btnAddNew = new System.Windows.Forms.Button();
-            this.grdPasswords = new System.Windows.Forms.DataGridView();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnDetails = new System.Windows.Forms.Button();
-            this.btnLogout = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.grdPasswords)).BeginInit();
-            this.SuspendLayout();
+            btnAddNew = new Button();
+            grdPasswords = new DataGridView();
+            btnEdit = new Button();
+            btnDelete = new Button();
+            btnDetails = new Button();
+            btnLogout = new Button();
+            label1 = new Label();
+            ((System.ComponentModel.ISupportInitialize)grdPasswords).BeginInit();
+            SuspendLayout();
             // 
             // btnAddNew
             // 
-            this.btnAddNew.Location = new System.Drawing.Point(82, 31);
-            this.btnAddNew.Name = "btnAddNew";
-            this.btnAddNew.Size = new System.Drawing.Size(75, 23);
-            this.btnAddNew.TabIndex = 0;
-            this.btnAddNew.Text = "Add new ";
-            this.btnAddNew.UseVisualStyleBackColor = true;
+            btnAddNew.Location = new Point(93, 23);
+            btnAddNew.Name = "btnAddNew";
+            btnAddNew.Size = new Size(101, 31);
+            btnAddNew.TabIndex = 0;
+            btnAddNew.Text = "Add new ";
+            btnAddNew.UseVisualStyleBackColor = true;
             // 
             // grdPasswords
             // 
-            this.grdPasswords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdPasswords.Location = new System.Drawing.Point(184, 71);
-            this.grdPasswords.Name = "grdPasswords";
-            this.grdPasswords.RowTemplate.Height = 25;
-            this.grdPasswords.Size = new System.Drawing.Size(240, 150);
-            this.grdPasswords.TabIndex = 1;
+            grdPasswords.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            grdPasswords.Location = new Point(93, 71);
+            grdPasswords.Name = "grdPasswords";
+            grdPasswords.RowTemplate.Height = 25;
+            grdPasswords.Size = new Size(525, 215);
+            grdPasswords.TabIndex = 1;
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(150, 300);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 23);
-            this.btnEdit.TabIndex = 2;
-            this.btnEdit.Text = "Edit ";
-            this.btnEdit.UseVisualStyleBackColor = true;
+            btnEdit.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnEdit.Location = new Point(93, 303);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(101, 31);
+            btnEdit.TabIndex = 2;
+            btnEdit.Text = "Edit ";
+            btnEdit.UseVisualStyleBackColor = true;
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(289, 304);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnDelete.TabIndex = 3;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnDelete.Location = new Point(289, 303);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(101, 31);
+            btnDelete.TabIndex = 3;
+            btnDelete.Text = "Delete";
+            btnDelete.UseVisualStyleBackColor = true;
             // 
             // btnDetails
             // 
-            this.btnDetails.Location = new System.Drawing.Point(387, 304);
-            this.btnDetails.Name = "btnDetails";
-            this.btnDetails.Size = new System.Drawing.Size(75, 27);
-            this.btnDetails.TabIndex = 4;
-            this.btnDetails.Text = "Details";
-            this.btnDetails.UseVisualStyleBackColor = true;
+            btnDetails.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnDetails.Location = new Point(517, 303);
+            btnDetails.Name = "btnDetails";
+            btnDetails.Size = new Size(101, 31);
+            btnDetails.TabIndex = 4;
+            btnDetails.Text = "Details";
+            btnDetails.UseVisualStyleBackColor = true;
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(695, 415);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(75, 23);
-            this.btnLogout.TabIndex = 5;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnLogout.Location = new Point(606, 401);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(101, 37);
+            btnLogout.TabIndex = 5;
+            btnLogout.Text = "Logout";
+            btnLogout.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(238, 23);
+            label1.Name = "label1";
+            label1.Size = new Size(241, 25);
+            label1.TabIndex = 6;
+            label1.Text = "Password List Home Screen";
             // 
             // HomeF
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnLogout);
-            this.Controls.Add(this.btnDetails);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.grdPasswords);
-            this.Controls.Add(this.btnAddNew);
-            this.Name = "HomeF";
-            this.Text = "HomeF";
-            ((System.ComponentModel.ISupportInitialize)(this.grdPasswords)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(719, 450);
+            Controls.Add(label1);
+            Controls.Add(btnLogout);
+            Controls.Add(btnDetails);
+            Controls.Add(btnDelete);
+            Controls.Add(btnEdit);
+            Controls.Add(grdPasswords);
+            Controls.Add(btnAddNew);
+            Name = "HomeF";
+            Text = "HomeF";
+            ((System.ComponentModel.ISupportInitialize)grdPasswords).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -112,5 +128,6 @@
         private Button btnDelete;
         private Button btnDetails;
         private Button btnLogout;
+        private Label label1;
     }
 }

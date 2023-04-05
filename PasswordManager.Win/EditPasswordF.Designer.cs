@@ -23,100 +23,119 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.btnEditCreate = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txtWebsite = new System.Windows.Forms.TextBox();
-            this.lblUsername = new System.Windows.Forms.Label();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.lblWebsite = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            btnEditCreate = new Button();
+            btnCancel = new Button();
+            txtUsername = new TextBox();
+            txtPassword = new TextBox();
+            txtWebsite = new TextBox();
+            lblUsername = new Label();
+            lblPassword = new Label();
+            lblWebsite = new Label();
+            label1 = new Label();
+            SuspendLayout();
             // 
             // btnEditCreate
             // 
-            this.btnEditCreate.Location = new System.Drawing.Point(176, 226);
-            this.btnEditCreate.Name = "btnEditCreate";
-            this.btnEditCreate.Size = new System.Drawing.Size(75, 23);
-            this.btnEditCreate.TabIndex = 0;
-            this.btnEditCreate.Text = "Edit/Create";
-            this.btnEditCreate.UseVisualStyleBackColor = true;
+            btnEditCreate.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnEditCreate.Location = new Point(140, 214);
+            btnEditCreate.Name = "btnEditCreate";
+            btnEditCreate.Size = new Size(110, 40);
+            btnEditCreate.TabIndex = 0;
+            btnEditCreate.Text = "Edit/Create";
+            btnEditCreate.UseVisualStyleBackColor = true;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(397, 226);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 1;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCancel.Location = new Point(292, 214);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(110, 42);
+            btnCancel.TabIndex = 1;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = true;
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(292, 86);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(100, 23);
-            this.txtUsername.TabIndex = 2;
+            txtUsername.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtUsername.Location = new Point(243, 83);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(159, 33);
+            txtUsername.TabIndex = 2;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(292, 125);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(100, 23);
-            this.txtPassword.TabIndex = 3;
+            txtPassword.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPassword.Location = new Point(243, 125);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(159, 33);
+            txtPassword.TabIndex = 3;
             // 
             // txtWebsite
             // 
-            this.txtWebsite.Location = new System.Drawing.Point(292, 161);
-            this.txtWebsite.Name = "txtWebsite";
-            this.txtWebsite.Size = new System.Drawing.Size(100, 23);
-            this.txtWebsite.TabIndex = 4;
+            txtWebsite.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtWebsite.Location = new Point(243, 164);
+            txtWebsite.Name = "txtWebsite";
+            txtWebsite.Size = new Size(159, 33);
+            txtWebsite.TabIndex = 4;
             // 
             // lblUsername
             // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(211, 89);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(60, 15);
-            this.lblUsername.TabIndex = 5;
-            this.lblUsername.Text = "Username";
+            lblUsername.AutoSize = true;
+            lblUsername.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lblUsername.Location = new Point(140, 86);
+            lblUsername.Name = "lblUsername";
+            lblUsername.Size = new Size(97, 25);
+            lblUsername.TabIndex = 5;
+            lblUsername.Text = "Username";
             // 
             // lblPassword
             // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(214, 125);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(57, 15);
-            this.lblPassword.TabIndex = 6;
-            this.lblPassword.Text = "Password";
+            lblPassword.AutoSize = true;
+            lblPassword.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPassword.Location = new Point(140, 125);
+            lblPassword.Name = "lblPassword";
+            lblPassword.Size = new Size(91, 25);
+            lblPassword.TabIndex = 6;
+            lblPassword.Text = "Password";
             // 
             // lblWebsite
             // 
-            this.lblWebsite.AutoSize = true;
-            this.lblWebsite.Location = new System.Drawing.Point(219, 161);
-            this.lblWebsite.Name = "lblWebsite";
-            this.lblWebsite.Size = new System.Drawing.Size(49, 15);
-            this.lblWebsite.TabIndex = 7;
-            this.lblWebsite.Text = "Website";
+            lblWebsite.AutoSize = true;
+            lblWebsite.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lblWebsite.Location = new Point(140, 164);
+            lblWebsite.Name = "lblWebsite";
+            lblWebsite.Size = new Size(79, 25);
+            lblWebsite.TabIndex = 7;
+            lblWebsite.Text = "Website";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(189, 27);
+            label1.Name = "label1";
+            label1.Size = new Size(151, 25);
+            label1.TabIndex = 8;
+            label1.Text = "Create Password";
             // 
             // EditPasswordF
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblWebsite);
-            this.Controls.Add(this.lblPassword);
-            this.Controls.Add(this.lblUsername);
-            this.Controls.Add(this.txtWebsite);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnEditCreate);
-            this.Name = "EditPasswordF";
-            this.Text = "EditPasswordF";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(579, 318);
+            Controls.Add(label1);
+            Controls.Add(lblWebsite);
+            Controls.Add(lblPassword);
+            Controls.Add(lblUsername);
+            Controls.Add(txtWebsite);
+            Controls.Add(txtPassword);
+            Controls.Add(txtUsername);
+            Controls.Add(btnCancel);
+            Controls.Add(btnEditCreate);
+            Name = "EditPasswordF";
+            Text = "EditPasswordF";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -129,5 +148,6 @@
         private Label lblUsername;
         private Label lblPassword;
         private Label lblWebsite;
+        private Label label1;
     }
 }
