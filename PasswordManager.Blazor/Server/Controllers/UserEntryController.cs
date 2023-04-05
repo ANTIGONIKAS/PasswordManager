@@ -31,7 +31,7 @@ namespace PasswordManager.Blazor.Server.Controllers {
                 Phone = x.Phone,
                 DateCreated = x.DateCreated,
                 Active = x.Active,
-                passwords = x.StoredPasswords
+             
 
 
             });
