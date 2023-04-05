@@ -48,6 +48,7 @@ namespace PasswordManager.EF.Repositories {
             UserEntryDb.LastName = entity.LastName;
             UserEntryDb.Phone = entity.Phone;
             UserEntryDb.Active = entity.Active;
+            UserEntryDb.Email = entity.Email;
 
             context.SaveChanges();
 

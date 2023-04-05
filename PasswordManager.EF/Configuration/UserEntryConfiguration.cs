@@ -25,6 +25,7 @@ namespace PasswordManager.EF.Configuration {
             builder.Property(userEntry=>userEntry.Phone).HasMaxLength(20).IsRequired();
             builder.Property(userEntry=>userEntry.DateCreated).IsRequired();
             builder.Property(userEntry=>userEntry.Active).IsRequired();
+            builder.Property(userEntry=>userEntry.Email).HasMaxLength(50).IsRequired();
            
 
             
