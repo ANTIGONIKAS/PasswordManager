@@ -17,6 +17,8 @@ namespace PasswordManager.Blazor.Shared.ViewModels.Password {
         public DateTime DateCreated { get; set; }
         public bool Active { get; set; }
 
+        public string Email { get; set; }
+
         public List<PasswordEntry> passwords { get; set; } = new();
 
         public UserEntryViewModel()

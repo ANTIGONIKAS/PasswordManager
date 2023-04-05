@@ -31,6 +31,7 @@ namespace PasswordManager.Blazor.Server.Controllers {
                 Phone = x.Phone,
                 DateCreated = x.DateCreated,
                 Active = x.Active,
+                Email= x.Email
              
 
 
@@ -49,6 +50,7 @@ namespace PasswordManager.Blazor.Server.Controllers {
             newUserEntry.Phone = user.Phone;
             newUserEntry.DateCreated = user.DateCreated;
             newUserEntry.Active = true;
+            newUserEntry.Email = user.Email;
             _userRepo.Add(newUserEntry);
             return Ok();
 
@@ -70,6 +72,7 @@ namespace PasswordManager.Blazor.Server.Controllers {
                 foundUser.Phone = newUser.Phone;
                 foundUser.DateCreated = newUser.DateCreated;
                 foundUser.Active = newUser.Active;
+                foundUser.Email = newUser.Email;
                 _userRepo.Update(newUser.ID, foundUser);
                 return Ok();
             }
@@ -94,6 +97,7 @@ namespace PasswordManager.Blazor.Server.Controllers {
             tmp.Phone = result.Phone;
             tmp.DateCreated = result.DateCreated;
             tmp.Active = result.Active;
+            tmp.Email = result.Email;
             tmp.passwords = result.StoredPasswords;
             return tmp;
 
