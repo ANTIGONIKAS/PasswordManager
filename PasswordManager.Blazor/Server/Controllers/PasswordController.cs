@@ -41,7 +41,7 @@ namespace PasswordManager.Blazor.Server.Controllers {
             newPasswordEntry.Password = password.Password;
             newPasswordEntry.DateModified = DateTime.Now;
             newPasswordEntry.Active = true;
-            newPasswordEntry.UserID = new Guid("A2C154CD-BEE6-42D4-A0A1-36AE84D23F44");
+            newPasswordEntry.UserID = password.UserID;
             _passwordRepo.Add(newPasswordEntry);
             return Ok();
 
@@ -59,6 +59,7 @@ namespace PasswordManager.Blazor.Server.Controllers {
                 foundEntry.DateModified= DateTime.Now;
                 foundEntry.Site = incoming.Site;
                 foundEntry.Active = incoming.Active;
+                foundEntry.UserID = incoming.UserID;
                 _passwordRepo.Update(incoming.ID, foundEntry);
                 return Ok();
             }
