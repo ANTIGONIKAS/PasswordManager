@@ -5,6 +5,7 @@
 @inject NavigationManager navigationManager
 @inject IJSRuntime jsRuntime
 @inject Authenticator auth
+@inject SessionState sessionstate
 
 <PageTitle>Index</PageTitle>
 
@@ -56,6 +57,8 @@ else
 
         }
         else {
+            sessionstate.IsLoggedIn = true;
+            sessionstate.UserID = found.ID;
             await jsRuntime.InvokeVoidAsync("alert", $"Welcome user {found.ID}");
             navigationManager.NavigateTo("/passwordlist");
         }

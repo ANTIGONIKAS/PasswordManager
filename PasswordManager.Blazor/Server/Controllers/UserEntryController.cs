@@ -112,7 +112,6 @@ namespace PasswordManager.Blazor.Server.Controllers {
             {
                 _userRepo.Delete(id);
                 return Ok();
-
             }
             else
             {

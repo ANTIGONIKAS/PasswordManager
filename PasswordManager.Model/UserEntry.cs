@@ -15,7 +15,6 @@ namespace PasswordManager.Model {
         public string Phone { get; set; }
         public DateTime DateCreated { get; set; }
         public bool Active { get; set; }
-
         public string Email { get; set; }
 
        

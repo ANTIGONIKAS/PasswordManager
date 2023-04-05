@@ -7,14 +7,24 @@ using System.Threading.Tasks;
 
 namespace PasswordManager.Blazor.Shared.Services {
     public class Authenticator {
-        public UserEntryViewModel Authenticate ( List<UserEntryViewModel> lista, UserEntryViewModel login) {
+        public UserEntryViewModel Authenticate(List<UserEntryViewModel> lista, UserEntryViewModel login) {
 
-            foreach(var user in lista) {
-                if(user.MasterPassword== login.MasterPassword && user.MasterUserName==login.MasterUserName) {
+            foreach (var user in lista) {
+                if (user.MasterPassword == login.MasterPassword && user.MasterUserName == login.MasterUserName) {
                     return user;
                 }
             }
             return null;
+        }
+
+        public bool HasAccess(SessionState session) {
+            if (session.IsLoggedIn) {
+                return true;
+            }
+            else { 
+                return false;
+            }
+
         }
     }
 }
