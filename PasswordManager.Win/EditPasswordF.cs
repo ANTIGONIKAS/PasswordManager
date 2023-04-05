@@ -10,7 +10,9 @@ using System.Windows.Forms;
 
 namespace PasswordManager.Win {
     public partial class EditPasswordF : Form {
-        public EditPasswordF() {
+        private Guid _userID;
+        public EditPasswordF(Guid IncomingUserID) {
+            _userID = IncomingUserID;
             InitializeComponent();
         }
     }

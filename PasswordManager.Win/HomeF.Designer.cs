@@ -41,6 +41,7 @@
             btnAddNew.TabIndex = 0;
             btnAddNew.Text = "Add new ";
             btnAddNew.UseVisualStyleBackColor = true;
+            btnAddNew.Click += btnAddNew_Click;
             // 
             // grdPasswords
             // 

@@ -10,8 +10,16 @@ using System.Windows.Forms;
 
 namespace PasswordManager.Win {
     public partial class HomeF : Form {
-        public HomeF() {
+
+        private Guid _userId;
+        public HomeF(Guid IncomingUserID) {
+            _userId = IncomingUserID;
             InitializeComponent();
+        }
+
+        private void btnAddNew_Click(object sender, EventArgs e) {
+            var createF = new EditPasswordF(_userId);
+            createF.ShowDialog();
         }
     }
 }
